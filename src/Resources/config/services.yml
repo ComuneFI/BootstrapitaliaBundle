@@ -2,15 +2,15 @@ parameters:
 #    demo.example.class: Fi\demoBundle\Example
 
 services:
-    fi.twig.fi_bootstrap_extension:
-      class: Fi\BootstrapitaliaBundle\Twig\Extension\BootstrapExtension
+    fi.twig.fi_bootstrapitalia_extension:
+      class: Fi\BootstrapitaliaBundle\Twig\Extension\BootstrapitaliaExtension
       tags:
         - { name: twig.extension }
       arguments: [ '@twig.loader' ]
 
-    fi.twig.demo.listener:
+    fi.twig.bootstrapitalia.demo.listener:
         class: Fi\BootstrapitaliaBundle\EventListener\ControllerListener
-        arguments: ['@fi.twig.fi_bootstrap_extension']
+        arguments: ['@fi.twig.fi_bootstrapitalia_extension']
         tags:
             - { name: kernel.event_listener, event: kernel.controller,method: onKernelController }
     
