@@ -1,0 +1,123 @@
+{% extends 'BootstrapitaliaBundle::layout.html.twig' %}
+
+{% block content -%}
+
+    <div class="container">
+        <h2>Esempio H2 {% if app.environment == 'dev' %} - AMBIENTE DI TEST {% endif %}</h2>
+        <div class="col-sm-12" >
+            <div class="panel panel-primary">
+                <div class="panel-heading">Dati Richiedente</div>
+                <div class="panel-body">
+                    Esempio Div
+                </div>
+            </div>
+
+            <div class="panel panel-primary">
+                <div class="panel-heading">Dati incarico</div>
+                <div class="panel-body">
+                    <div class="col-sm-3 form-group">
+                        <label class="coloretesto" for="data_datepicker">Data</label>
+                        <div class="input-group date">
+                            <input type="text" id="data_datepicker" class="form-control fibootstrap_datepicker" required="required"><span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 form-group">
+                        <label for="oggetto">Oggetto dell'incarico</label>
+                        <select class="form-control datidainviare" id="oggetto"></select>
+                    </div>
+                    <div class="col-sm-3 form-group">
+                        <label for="importo">Numero</label>
+                        <input type="number" class="form-control" id="numero" placeholder="" name="numero">
+                    </div>
+
+                    <div class="col-sm-6 form-group">
+                        <label class="coloretesto" for="descrizioneriferimento1">Nominativo/Descrizione del contatto</label>
+                        <input class="form-control datidainviare" id="descrizioneriferimento1" value="" placeholder="Nominativo/Descrizione del 1° contatto"/>
+                    </div> 
+                </div>
+            </div>
+        </div>
+
+        <!--panel upload file-->
+        <form id="uploadfile" method="POST" enctype="multipart/form-data">
+            <div class="col-sm-12" >
+                <div class="panel panel-primary">
+                    <div class="panel-heading">Caricamento File</div>
+
+                    <div class="panel-body">
+                        <div class="form-inline col-sm-12">
+                            <div class="fileupload fileupload-new" data-provides="fileupload">
+                                <span class="btn btn-primary btn-file"><span class="fileupload-new">Seleziona un file</span>
+                                    <span class="fileupload-exists">Change</span>         <input type="file" /></span>
+                                <span class="fileupload-preview"></span>
+                                <a href="#" class="close fileupload-exists" data-dismiss="fileupload" style="float: none">×</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </form>
+
+        <!--Dichiarazioni-->
+        <div class="col-sm-12" >
+            <div class="panel panel-primary">
+                <div class="panel-heading">Dichiarazioni</div>
+
+                <div class="panel-body">
+                    <p class="coloretesto">DICHIARA, sotto la propria responsabilità ....</p>
+
+                    <div class="form-inline col-sm-12">
+                        <div class="form-group">
+                            <label class="coloretesto" for="dichiarazione">Accetto</label>
+                            <input type="checkbox" id="dichiarazione" class="form-control" />
+                        </div> 
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="text-center">
+            <button id="btninvia" name="btninvia" type="button" class="btn btn-primary">Invia</button>
+        </div>
+
+        <script type="text/javascript">
+            $(document).ready(function () {
+
+                $(document).on("click", "#btninvia", function (e) {
+                    e.preventDefault();
+
+                    return inviamodulo();
+                });
+
+                function inviamodulo() {
+                    swal('Richiesta inviata', 'La richiesta è stata inviata!', 'success');
+                    /*swal('Attenzione', 'La richiesta non è stata inviata!', 'error');*/
+                }
+
+                $.ajax({
+                    url: '{{path ('fi_bootstrapdemo_dropdown')}}',
+                    type: "POST",
+                    async: false,
+                    dataType: "json",
+                    error: function (jqXHR, textStatus, errorThrown) {
+                        alert('error! textStatus = ' + textStatus + ' - errorThrown = ' + errorThrown + ' - XHR = ' + jqXHR);
+                    },
+                    beforeSend: function (xhr) {
+                        $("#oggetto").html('<option value="0">Caricamento dati...</option>');
+                    },
+                    success: function (response) {
+                        //Prende la risposta ed alimenta la select
+                        var output = [];
+                        if (response.length > 0) {
+                            $.each(response, function (key, value) {
+                                output.push('<option value="' + value["id"] + '">' + value["descrizione"] + '</option>');
+                            });
+                            $("#oggetto").html(output.join(''));
+                        }
+                    }
+                });
+            });
+        </script>            
+    {% endblock %}
+
