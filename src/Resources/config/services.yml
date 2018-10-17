@@ -3,13 +3,13 @@ parameters:
 
 services:
     fi.twig.fi_bootstrap_extension:
-      class: Fi\BootstrapBundle\Twig\Extension\BootstrapExtension
+      class: Fi\BootstrapitaliaBundle\Twig\Extension\BootstrapExtension
       tags:
         - { name: twig.extension }
       arguments: [ '@twig.loader' ]
 
     fi.twig.demo.listener:
-        class: Fi\BootstrapBundle\EventListener\ControllerListener
+        class: Fi\BootstrapitaliaBundle\EventListener\ControllerListener
         arguments: ['@fi.twig.fi_bootstrap_extension']
         tags:
             - { name: kernel.event_listener, event: kernel.controller,method: onKernelController }

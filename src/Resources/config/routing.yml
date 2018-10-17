@@ -1,4 +1,4 @@
-FiBootstrapBundle_demo:
-    resource: "@BootstrapBundle/Resources/config/routing/demo.yml"
+FiBootstrapitaliaBundle_demo:
+    resource: "@BootstrapitaliaBundle/Resources/config/routing/demo.yml"
     prefix:   /bootstrapdemo
 
