@@ -4,7 +4,7 @@ namespace Fi\BootstrapitaliaBundle\EventListener;
 
 use Symfony\Component\HttpKernel\HttpKernelInterface;
 use Symfony\Component\HttpKernel\Event\FilterControllerEvent;
-use Fi\BootstrapitaliaBundle\Twig\Extension\BootstrapExtension;
+use Fi\BootstrapitaliaBundle\Twig\Extension\BootstrapitaliaExtension;
 
 class ControllerListener
 {
