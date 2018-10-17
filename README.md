@@ -1,14 +1,14 @@
-BootstrapBundle
+BootstrapitaliaBundle
 =============
 Installazione:
 -------------
 
 - Aggiungere tramite composer:
 ```
-composer require fi/bootstrapbundle
+composer require fi/bootstrapitaliabundle
 ```
-- Aggiungere nel file app/AppKernel.php nella funzione registerBundles;
+- Registrare il bundle nel Kernel;
 ```
-    new Fi\BootstrapBundle\FiBootstrapBundle(),
+    new Fi\BootstrapitaliaBundle\FiBootstrapitaliaBundle(),
 ```
 
