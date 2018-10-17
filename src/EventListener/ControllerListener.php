@@ -10,7 +10,7 @@ class ControllerListener
 {
     protected $extension;
 
-    public function __construct(BootstrapExtension $extension)
+    public function __construct(BootstrapitaliaExtension $extension)
     {
         $this->extension = $extension;
     }
