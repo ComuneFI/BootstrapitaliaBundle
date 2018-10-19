@@ -1,8 +1,11 @@
 $(document).ready(function () {
-    $('body').on('focus', ".fibootstrap_datepicker", function () {
-        $(this).datepicker({
-            format: 'dd/mm/yyyy',
-            language: "it"
-        });
+    bootbox.setDefaults({
+        /**
+         * @optional String
+         * @default: en
+         * which locale settings to use to translate the three
+         * standard button labels: OK, CONFIRM, CANCEL
+         */
+        locale: "it"
     });
 });
