@@ -3,34 +3,30 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>{% block title %}{{appname}} - {{app.environment}} {% endblock %} </title>
+        <title>{% block title %}{{appname}} - {{app.environment}} {% endblock %}</title>
         <link rel="icon" sizes="16x16" href="{{ asset('favicon.ico') }}" />
         <script type="text/javascript">
-            var baseUrl = '{{app.request.baseUrl}}';</script>
-            {% block head %}
+            var baseUrl = '{{app.request.baseUrl}}';
+        </script>
+        {% block head %}
             <script type="text/javascript" src="{{ asset('bundles/bootstrapitalia/js/bootstrap-italia.bundle.min.js') }}" ></script>
+            <script type="text/javascript" src="{{ asset('bundles/bootstrapitalia/js/bootbox.min.js') }}" ></script>
 
             <script src="{{ asset('bundles/bootstrapitalia/js/fibootstrapitalia.js') }}"></script>
-            {% block javascript %}<!---->{% endblock %}
+            {% block javascript %}
+            {% endblock %}
             <link rel="stylesheet" href="{{ asset('bundles/bootstrapitalia/css/bootstrap-italia.min.css') }}" >
             <link rel="stylesheet" href="{{ asset('bundles/bootstrapitalia/css/italia-icon-font.css') }}" >  
 
             <link rel="stylesheet" href="{{ asset('bundles/bootstrapitalia/css/fibootstrapitalia.css') }}">
-            {% block css %}<!---->{% endblock %}
-        {% endblock %}
-    </head>
-
-    <body>
-        {% block body %}
-
-            {% block fibody %}
-                <!-- Header -->
-                <!-- /Header --> 
-                {% block content %}<!---->{% endblock %}
-                <!-- Footer -->
-                <!-- /Footer --> 
+            {% block css %}
             {% endblock %}
         {% endblock %}
-
+    </head>
+    <body>
+        {% block body %}
+            {% block content %}
+            {% endblock %}
+        {% endblock %}
     </body>
 </html>
