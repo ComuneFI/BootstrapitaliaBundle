@@ -9,6 +9,13 @@
             var baseUrl = '{{app.request.baseUrl}}';
         </script>
         {% block head %}
+            {% block bootstrapitaliajavascript %}
+                <!--Consigliato da developer italia caricare il js di bootstrap in fondo alla pagina per una questione di velocità-->
+                <!--ma anche perchè altrimenti nella console arriva un errore di typeerror e-->
+                <script type="text/javascript" src="{{ asset('bundles/bootstrapitalia/js/bootstrap-italia.bundle.min.js') }}" ></script>
+                <script type="text/javascript" src="{{ asset('bundles/bootstrapitalia/js/bootbox.min.js') }}" ></script>
+                <script src="{{ asset('bundles/bootstrapitalia/js/fibootstrapitalia.js') }}"></script>
+            {% endblock %}
 
             {% block javascript %}
             {% endblock %}
@@ -24,13 +31,6 @@
         {% block body %}
             {% block content %}
             {% endblock %}
-        {% endblock %}
-        {% block bootstrapitaliajavascript %}
-            <!--Consigliato da developer italia caricare il js di bootstrap in fondo alla pagina per una questione di velocità-->
-            <!--ma anche perchè altrimenti nella console arriva un errore di typeerror e-->
-            <script type="text/javascript" src="{{ asset('bundles/bootstrapitalia/js/bootstrap-italia.bundle.min.js') }}" ></script>
-            <script type="text/javascript" src="{{ asset('bundles/bootstrapitalia/js/bootbox.min.js') }}" ></script>
-            <script src="{{ asset('bundles/bootstrapitalia/js/fibootstrapitalia.js') }}"></script>
         {% endblock %}
     </body>
 </html>
