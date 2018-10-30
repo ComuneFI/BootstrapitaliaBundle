@@ -1,6 +1,6 @@
 function toast(messaggio) {
-    var x = document.getElementById("snackbar");
-    x.className = "show";
+    var x = $("#snackbar");
     x.html(messaggio);
-    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+    x.addClass("show");
+    setTimeout(function(){ x.removeClass("show"); }, 3000);
 }
