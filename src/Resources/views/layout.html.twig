@@ -14,14 +14,15 @@
                 <!--ma anche perchè altrimenti nella console arriva un errore di typeerror e-->
                 <script type="text/javascript" src="{{ asset('bundles/bootstrapitalia/js/bootstrap-italia.bundle.min.js') }}" ></script>
                 <script type="text/javascript" src="{{ asset('bundles/bootstrapitalia/js/bootbox.min.js') }}" ></script>
-                <script src="{{ asset('bundles/bootstrapitalia/js/fibootstrapitalia.js') }}"></script>
+                <script type="text/javascript" src="{{ asset('bundles/bootstrapitalia/js/fibootstrapitalia.js') }}"></script>
+                <script type="text/javascript" src="{{ asset('bundles/bootstrapitalia/js/toast.js') }}"></script>
             {% endblock %}
 
             {% block javascript %}
             {% endblock %}
             <link rel="stylesheet" href="{{ asset('bundles/bootstrapitalia/css/bootstrap-italia.min.css') }}" >
             <link rel="stylesheet" href="{{ asset('bundles/bootstrapitalia/css/italia-icon-font.css') }}" >  
-
+            <link rel="stylesheet" href="{{ asset('bundles/bootstrapitalia/css/toast.css') }}" >  
             <link rel="stylesheet" href="{{ asset('bundles/bootstrapitalia/css/fibootstrapitalia.css') }}">
             {% block css %}
             {% endblock %}
