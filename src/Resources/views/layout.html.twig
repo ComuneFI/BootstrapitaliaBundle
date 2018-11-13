@@ -15,14 +15,18 @@
                 <script type="text/javascript" src="{{ asset('bundles/bootstrapitalia/js/bootstrap-italia.bundle.min.js') }}" ></script>
                 <script type="text/javascript" src="{{ asset('bundles/bootstrapitalia/js/bootbox.min.js') }}" ></script>
                 <script type="text/javascript" src="{{ asset('bundles/bootstrapitalia/js/fibootstrapitalia.js') }}"></script>
-                <script type="text/javascript" src="{{ asset('bundles/bootstrapitalia/js/toast.js') }}"></script>
+                <script type="text/javascript">
+                    function fifreenotification(messaggio, tipo = "info", icon = "it-info-circle") {
+                        $("#fifireenotificationcontainer").html('<div class="notification with-icon ' + tipo + '" role="alert" aria-labelledby="' + messaggio + '" id="fifireenotification"><h5><svg class="icon"><use xlink:href="{{ asset('bundles/bootstrapitalia/svg/sprite.svg') }}#' + icon + '"></use></svg>' + messaggio + '</h5></div>');
+                        notificationShow('fifireenotification', 6000);
+                    }
+                </script>
             {% endblock %}
 
             {% block javascript %}
             {% endblock %}
             <link rel="stylesheet" href="{{ asset('bundles/bootstrapitalia/css/bootstrap-italia.min.css') }}" >
             <link rel="stylesheet" href="{{ asset('bundles/bootstrapitalia/css/italia-icon-font.css') }}" >  
-            <link rel="stylesheet" href="{{ asset('bundles/bootstrapitalia/css/toast.css') }}" >  
             <link rel="stylesheet" href="{{ asset('bundles/bootstrapitalia/css/fibootstrapitalia.css') }}">
             {% block css %}
             {% endblock %}
@@ -33,6 +37,6 @@
             {% block content %}
             {% endblock %}
         {% endblock %}
-        <div id="snackbar"></div>
+        <div id="fifireenotificationcontainer"></div>
     </body>
 </html>
