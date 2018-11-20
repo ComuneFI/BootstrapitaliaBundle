@@ -1,7 +1,7 @@
 fi_bootstrapdemo_index:
     path:  /
-    defaults: { _controller: "BootstrapitaliaBundle:Bootstrapitalia:index" }
+    defaults: { _controller: "BootstrapitaliaBundle:Bootstrap:index" }
 
 fi_bootstrapdemo_dropdown:
     path:  /dropdwon
-    defaults: { _controller: "BootstrapitaliaBundle:Bootstrapitalia:dropdown" }
+    defaults: { _controller: "BootstrapitaliaBundle:Bootstrap:dropdown" }
