@@ -35,7 +35,7 @@
             <script type="text/javascript" src="{{ asset('bundles/bootstrapitalia/js/fibootstrapitalia.js') }}"></script>
 
             <script type="text/javascript">
-                function fifreenotification(messaggio, tipo = "info", icon = "it-info-circle") {
+                function binotification(messaggio, tipo = "info", icon = "it-info-circle") {
                     $("#fifireenotificationcontainer").html('<div class="notification with-icon ' + tipo + '" role="alert" aria-labelledby="' + messaggio + '" id="fifireenotification"><h5><svg class="icon"><use xlink:href="{{ asset('bundles/bootstrapitalia/svg/sprite.svg') }}#' + icon + '"></use></svg>' + messaggio + '</h5></div>');
                     notificationShow('fifireenotification', 6000);
                 }
