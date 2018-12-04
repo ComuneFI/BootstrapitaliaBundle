@@ -36,7 +36,7 @@
 
             <script type="text/javascript">
                 function binotification(messaggio, tipo = "info", icon = "it-info-circle") {
-                    $("#fifireenotificationcontainer").html('<div class="notification with-icon ' + tipo + '" role="alert" aria-labelledby="' + messaggio + '" id="fifireenotification"><h5><svg class="icon"><use xlink:href="{{ asset('bundles/bootstrapitalia/svg/sprite.svg') }}#' + icon + '"></use></svg>' + messaggio + '</h5></div>');
+                    $("#fifireenotificationcontainer").html('<div class="notification with-icon ' + tipo + '" role="alert" aria-labelledby="' + messaggio + '" id="fifireenotification"><h5><svg class="icon"><use xlink:href="{{ asset('bundles/bootstrapitalia/svg/sprite.svg') }}#' + icon + '"><\/use><\/svg>' + messaggio + '<\/h5><\/div>');
                     notificationShow('fifireenotification', 6000);
                 }
             </script>
