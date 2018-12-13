@@ -14,3 +14,7 @@ services:
         tags:
             - { name: kernel.event_listener, event: kernel.controller,method: onKernelController }
     
+    #Controllers
+    fi.bootstrapitalia.controller.demo:
+        class: Fi\BootstrapitaliaBundle\Controller\BootstrapitaliaController
+        public: true
