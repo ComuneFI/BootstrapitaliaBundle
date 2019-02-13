@@ -6,6 +6,7 @@
         <title>{% block title %}{% endblock %}</title>
         <link rel="icon" sizes="16x16" href="{{ asset('favicon.ico') }}" />
         <script type="text/javascript">
+            window.__PUBLIC_PATH__ = '{{ asset('bundles/bootstrapitalia/fonts') }}';
             var baseUrl = '{{app.request.baseUrl}}';
         </script>
         {% block head %}
