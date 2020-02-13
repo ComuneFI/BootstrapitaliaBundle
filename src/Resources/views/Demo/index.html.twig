@@ -1,5 +1,261 @@
-{% extends 'BiCoreBundle::layout.html.twig' %}
+{% extends '@Bootstrapitalia/layout.html.twig' %}
 
 {% block content -%}
-    <h5>Bootstrapitalia demo</h5>
+    <h1>Bootstrapitalia demo</h1>
+
+    <div class="it-timeline-wrapper">
+        <div class="row">
+            <div class="col-12">
+                <div class="timeline-element">
+                    <div class="it-pin-wrapper it-evidence">
+                        <div class="pin-icon">
+                            <svg class="icon">
+                            <use xlink:href="{{asset('build/svg/sprite.svg#it-code-circle')}}"></use>
+                            </svg>
+                        </div>
+                        <div class="pin-text"><span>maggio 2018</span></div>
+                    </div>
+                    <div class="card-wrapper">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="category-top">
+                                    <a class="category" href="#">Category</a>
+                                    <span class="data">10/12/2018</span>
+                                </div>
+                                <h5 class="card-title big-heading">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <span class="card-signature">di Federico De Paolis</span>
+                                <a class="read-more" href="#">
+                                    <span class="text">Leggi di più</span>
+                                    <svg class="icon">
+                                    <use xlink:href="{{asset('build/svg/sprite.svg#it-arrow-right')}}"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="timeline-element">
+                    <div class="it-pin-wrapper it-evidence">
+                        <div class="pin-icon">
+                            <svg class="icon">
+                            <use xlink:href="{{asset('build/svg/sprite.svg#it-code-circle')}}"></use>
+                            </svg>
+                        </div>
+                        <div class="pin-text"><span>giugno 2018</span></div>
+                    </div>
+                    <div class="card-wrapper">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="timeline-element">
+                    <div class="it-pin-wrapper it-evidence">
+                        <div class="pin-icon">
+                            <svg class="icon">
+                            <use xlink:href="{{asset('build/svg/sprite.svg#it-code-circle')}}"></use>
+                            </svg>
+                        </div>
+                        <div class="pin-text"><span>luglio 2018</span></div>
+                    </div>
+                    <div class="card-wrapper">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="category-top">
+                                    <a class="category" href="#">Category</a>
+                                    <span class="data">10/12/2018</span>
+                                </div>
+                                <h5 class="card-title big-heading">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <span class="card-signature">di Federico De Paolis</span>
+                                <a class="read-more" href="#">
+                                    <span class="text">Leggi di più</span>
+                                    <svg class="icon">
+                                    <use xlink:href="{{asset('build/svg/sprite.svg#it-arrow-right')}}"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="timeline-element">
+                    <span class="it-now-label d-none d-lg-flex">Oggi</span>
+                    <div class="it-pin-wrapper it-now">
+                        <div class="pin-icon">
+                            <svg class="icon">
+                            <use xlink:href="{{asset('build/svg/sprite.svg#it-code-circle')}}"></use>
+                            </svg>
+                        </div>
+                        <div class="pin-text"><span>agosto 2018</span></div>
+                    </div>
+                    <div class="card-wrapper">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="timeline-element">
+                    <div class="it-pin-wrapper">
+                        <div class="pin-icon">
+                            <svg class="icon">
+                            <use xlink:href="{{asset('build/svg/sprite.svg#it-code-circle')}}"></use>
+                            </svg>
+                        </div>
+                        <div class="pin-text"><span>settembre 2018</span></div>
+                    </div>
+                    <div class="card-wrapper">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="category-top">
+                                    <a class="category" href="#">Category</a>
+                                    <span class="data">10/12/2018</span>
+                                </div>
+                                <h5 class="card-title big-heading">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <span class="card-signature">di Federico De Paolis</span>
+                                <a class="read-more" href="#">
+                                    <span class="text">Leggi di più</span>
+                                    <svg class="icon">
+                                    <use xlink:href="{{asset('build/svg/sprite.svg#it-arrow-right')}}"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="timeline-element">
+                    <div class="it-pin-wrapper">
+                        <div class="pin-icon">
+                            <svg class="icon">
+                            <use xlink:href="{{asset('build/svg/sprite.svg#it-code-circle')}}"></use>
+                            </svg>
+                        </div>
+                        <div class="pin-text"><span>ottobre 2018</span></div>
+                    </div>
+                    <div class="card-wrapper">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="timeline-element">
+                    <div class="it-pin-wrapper">
+                        <div class="pin-icon">
+                            <svg class="icon">
+                            <use xlink:href="{{asset('build/svg/sprite.svg#it-code-circle')}}"></use>
+                            </svg>
+                        </div>
+                        <div class="pin-text"><span>novembre 2018</span></div>
+                    </div>
+                    <div class="card-wrapper">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="category-top">
+                                    <a class="category" href="#">Category</a>
+                                    <span class="data">10/12/2018</span>
+                                </div>
+                                <h5 class="card-title big-heading">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <span class="card-signature">di Federico De Paolis</span>
+                                <a class="read-more" href="#">
+                                    <span class="text">Leggi di più</span>
+                                    <svg class="icon">
+                                    <use xlink:href="{{asset('build/svg/sprite.svg#it-arrow-right')}}"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="timeline-element">
+                    <div class="it-pin-wrapper">
+                        <div class="pin-icon">
+                            <svg class="icon">
+                            <use xlink:href="{{asset('build/svg/sprite.svg#it-code-circle')}}"></use>
+                            </svg>
+                        </div>
+                        <div class="pin-text"><span>dicembre 2018</span></div>
+                    </div>
+                    <div class="card-wrapper">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-12 col-lg-4">
+            <!--start card-->
+            <div class="card-wrapper">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+            </div>
+            <!--end card-->
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Apri dropdown
+            <svg class="icon-expand icon icon-sm icon-primary"><use xlink:href="{{asset('build/svg/sprite.svg#it-expand')}}"></use></svg>
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <div class="link-list-wrapper">
+                <ul class="link-list">
+                    <li><a class="list-item" href="#"><span>Azione 1</span></a></li>
+                    <li><a class="list-item" href="#"><span>Azione 2</span></a></li>
+                    <li><a class="list-item" href="#"><span>Azione 3</span></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="callout">
+        <div class="callout-title"><svg class="icon"><use xlink:href="{{asset('build/svg/sprite.svg#it-info-circle')}}"></use></svg><span class="sr-only">Confermato</span> Titolo callout</div>
+        <p>Maecenas vulputate ante dictum vestibulum volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non augue non purus vestibulum varius.</p>
+    </div>
+
+    <div class="py-1">
+        <div class="btn-example">
+            <button type="button" class="btn btn-primary">Primary</button>
+            <button type="button" class="btn btn-outline-primary">Primary outline</button>
+            <button type="button" class="btn btn-primary disabled">Primary disabled</button>
+        </div>
+    </div>
+
+
 {% endblock %}

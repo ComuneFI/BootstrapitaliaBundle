@@ -9,6 +9,6 @@ class BootstrapitaliaController extends AbstractController
     public function index()
     {
         //Prova
-        return $this->render('BootstrapitaliaBundle:Demo:index.html.twig');
+        return $this->render('@Bootstrapitalia/Demo/index.html.twig');
     }
 }
