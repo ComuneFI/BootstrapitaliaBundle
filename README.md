@@ -12,7 +12,7 @@ composer require fi/bootstrapitaliabundle
 ```
     new Fi\BootstrapitaliaBundle\FiBootstrapitaliaBundle(),
 ```
--Per vedere la demo aggiungere il routing:
+- Per vedere la demo aggiungere il routing:
 ```
 bootstrapitalia:
     resource: "@BootstrapitaliaBundle/Resources/config/routing.yml"
